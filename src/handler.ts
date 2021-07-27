@@ -22,7 +22,7 @@ bot
       const description = text.slice(0, DESCRIPTION_OVERFLOW)
       return {
         type: 'article',
-        id: i + '_' + v4(),
+        id: v4(),
         title: i18n[masker.title],
         description,
         input_message_content: {
