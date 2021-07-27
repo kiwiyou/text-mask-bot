@@ -1,0 +1,19 @@
+name = "text-mask-bot"
+type = "javascript"
+account_id = "<your account id>"
+zone_id = "<your zone id>"
+routes = ["<your route>"]
+workers_dev = false
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
+
+[[kv_namespaces]]
+binding = "MASKED_TEXT"
+id = "<your kv namespace id>"
+preview_id = "<your preview kv namespace id>"
+
+[vars]
+BOT_TOKEN = "<your bot token>"
